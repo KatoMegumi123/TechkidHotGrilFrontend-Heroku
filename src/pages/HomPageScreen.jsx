@@ -98,6 +98,10 @@ class HomPageScreen extends Component {
       });
   }
 
+  upload = (event)=>{
+    window.location.href = '/upload';
+  }
+
   render() {
     var maxPageNumber = Math.ceil(this.state.total / pageSize)
     var paginations = [];
