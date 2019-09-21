@@ -37,7 +37,7 @@ class LoginScreen extends Component {
       fail_message: "",
     });
 
-    fetch('http://localhost:3001/users/login', {
+    fetch('https://mindx-social-path.herokuapp.com/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

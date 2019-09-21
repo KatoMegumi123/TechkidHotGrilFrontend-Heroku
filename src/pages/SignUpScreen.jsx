@@ -75,7 +75,7 @@ class SignUpScreen extends Component {
     this.setState({
       loading: true,
     })
-    fetch('http://localhost:3001/users/register', {
+    fetch('https://mindx-social-path.herokuapp.com/users/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

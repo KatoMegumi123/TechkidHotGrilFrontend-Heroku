@@ -46,14 +46,14 @@ class UploadScreen extends Component {
     try {
       const formData = new FormData();
       formData.append('image', this.state.file)
-      const upLoadResult = await fetch('http://localhost:3001/uploads/photos', {
+      const upLoadResult = await fetch('https://mindx-social-path.herokuapp.com/uploads/photos', {
         method: 'POST',
         credentials: 'include',
         body: formData,
       })
         .then((res) => { return res.json() });
       console.log(upLoadResult);
-      const newStory = await fetch('http://localhost:3001/posts/create-post', {
+      const newStory = await fetch('https://mindx-social-path.herokuapp.com/posts/create-post', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -84,7 +84,7 @@ class UploadScreen extends Component {
   }
 
   logout = (event) => {
-    fetch(`http://localhost:3001/users/logout`, { credentials: 'include' })
+    fetch(`https://mindx-social-path.herokuapp.com/users/logout`, { credentials: 'include' })
       .then(function (response) {
         return response.json();
       })

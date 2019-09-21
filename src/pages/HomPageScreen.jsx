@@ -16,7 +16,7 @@ class HomPageScreen extends Component {
 
   getData = async (pageNumber) => {
     try {
-      const result = await fetch(`http://localhost:3001/posts/get/posts?pageNumber=${pageNumber}&pageSize=${pageSize}`, {
+      const result = await fetch(`https://mindx-social-path.herokuapp.com/posts/get/posts?pageNumber=${pageNumber}&pageSize=${pageSize}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ class HomPageScreen extends Component {
   }
 
   logout = (event) => {
-    fetch(`http://localhost:3001/users/logout`, { credentials: 'include' })
+    fetch(`https://mindx-social-path.herokuapp.com/users/logout`, { credentials: 'include' })
       .then(function (response) {
         return response.json();
       })
@@ -145,7 +145,7 @@ class HomPageScreen extends Component {
               return (
                 <div className="col-lg-4 col-md-6 col-sm-10" key={value._id}>
                   <div className="card">
-                    <img src={`http://localhost:3001${value.imageUrl}`} className="card-img-top img-thumbnail" alt="Some image"></img>
+                    <img src={`https://mindx-social-path.herokuapp.com${value.imageUrl}`} className="card-img-top img-thumbnail" alt="Some image"></img>
                     <div className="card-body">
                       <h5 className="card-title">{value.author.fullName}</h5>
                       <p className="card-text"

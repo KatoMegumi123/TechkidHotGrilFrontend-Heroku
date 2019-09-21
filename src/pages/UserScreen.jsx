@@ -15,7 +15,7 @@ class UserScreen extends Component {
   }
 
   logout = (event) => {
-    fetch(`http://localhost:3001/users/logout`, { credentials: 'include' })
+    fetch(`https://mindx-social-path.herokuapp.com/users/logout`, { credentials: 'include' })
       .then(function (response) {
         return response.json();
       })
